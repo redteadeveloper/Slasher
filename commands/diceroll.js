@@ -10,7 +10,7 @@ module.exports = {
         var fact = Math.floor(Math.random() * facts.length);     
         const diceembed = new Discord.MessageEmbed()
             .setColor('#00b140')
-            .setTitle('Coin flip')
+            .setTitle('Dice roll')
             .setDescription( 'Result: ' + facts[fact] )
 			.setTimestamp()
 			
