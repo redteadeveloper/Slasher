@@ -13,25 +13,26 @@ process.on('unhandledRejection', error => {
 client.on('ready', () => {
     
     console.log(`\nLogged in as ${client.user.tag}!\n`)
+    client.user.setActivity(`Slash!`, { type: "PLAYING" }); 
 
     const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
-
     for (const file of commandFiles) {
         const command = require(`./commands/${file}`);
         // Test server
-        client.api.applications(client.user.id).guilds('749595288280498188').commands.post({data: {
+        client.api.applications(client.user.id).guilds('749595288280498188').commands.post({ data: {
             name: command.name,
             description: command.description,
+            options: command.commandOptions
         }})
         // Global
-        client.api.applications(client.user.id).commands.post({data: {
+        client.api.applications(client.user.id).commands.post({ data: {
             name: command.name,
             description: command.description,
+            options: command.commandOptions
         }})
         client.commands.set(command.name, command);
         console.log(`Loaded command : ${command.name} from ${file}`)
     }
-
     console.log("")
 
 });

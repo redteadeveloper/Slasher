@@ -3,6 +3,7 @@ const Discord = require('discord.js')
 module.exports = {
 	name: 'diceroll',
 	description: 'Roll a dice.',
+	commandOptions: null,
 	execute(interaction) {
         var facts = ["1", "2", "3", "4", "5", "6"]
         var fact = Math.floor(Math.random() * facts.length);     
