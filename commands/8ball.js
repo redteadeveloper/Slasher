@@ -12,15 +12,16 @@ module.exports = {
 		}
 	],
 	execute(interaction) {
-        var answers = ["Yes.",
-                 "Ask me later.", 
-                 "No.", 
-                 "I don't know",
-                 "Of course.",
-                 "Never.", 
-                 "Maybe.",
-                 "Hmm...",
-                 "Excuse me?"];
+        var answers = [
+            "Yes.",
+            "Ask me later.", 
+            "No.", 
+            "I don't know",
+            "Of course.",
+            "Never.", 
+            "Maybe.",
+            "Hmm...",
+            "Excuse me?"];
 
         var answer = Math.floor(Math.random() * answers.length);
  
@@ -29,10 +30,11 @@ module.exports = {
             .setTitle('**8ball**')
             .setDescription( '**Your question**: ' + interaction.data.options[0].value + '\n**My answer**: ' + answers[answer] )
             .setTimestamp() 
+
 		client.api.interactions(interaction.id, interaction.token).callback.post({data: {
 			type: 4,
 			data: {
-					content: `:ping_pong: Pong: ${client.ws.ping}ms!`
+					embeds: [ballembed]
 				}
 			}
 		})
