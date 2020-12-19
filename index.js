@@ -7,11 +7,7 @@ client.commands = new Discord.Collection();
 global.client = client
 
 process.on('unhandledRejection', error => {
-    console.log(`UnhandledPromiseRejection : ${error.name}`);
-    console.log(`${error.message ? error.message : "null"}`)
-    console.log("### Extra error info ###")
-    console.log(`Error path : ${error.path ? error.path : "null"}`)
-    console.log(`Error code: ${error.code ? error.code : "null"}\n`)
+    console.log(`UnhandledPromiseRejection : ${error}`)
 });
 
 client.on('ready', () => {
@@ -22,7 +18,13 @@ client.on('ready', () => {
 
     for (const file of commandFiles) {
         const command = require(`./commands/${file}`);
+        // Test server
         client.api.applications(client.user.id).guilds('749595288280498188').commands.post({data: {
+            name: command.name,
+            description: command.description,
+        }})
+        // Global
+        client.api.applications(client.user.id).commands.post({data: {
             name: command.name,
             description: command.description,
         }})
@@ -42,8 +44,7 @@ client.ws.on('INTERACTION_CREATE', async interaction => {
         client.commands.get(interaction.data.name).execute(interaction);
     } catch (error) {
         console.log(`Error from command ${interaction.data.name} : ${error.message}`);
-        console.log(`${error.stack}`)
-        console.log("")
+        console.log(`${error.stack}\n`)
         client.api.interactions(interaction.id, interaction.token).callback.post({data: {
 			type: 4,
 			data: {
