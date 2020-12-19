@@ -16,7 +16,7 @@ module.exports = {
             "Yes.",
             "Ask me later.", 
             "No.", 
-            "I don't know",
+            "I don't know.",
             "Of course.",
             "Never.", 
             "Maybe.",
@@ -26,7 +26,7 @@ module.exports = {
         var answer = Math.floor(Math.random() * answers.length);
  
         const ballembed = new Discord.MessageEmbed()
-            .setColor('#9c51b6')
+            .setColor('#00b140')
             .setTitle('**8ball**')
             .setDescription( '**Your question**: ' + interaction.data.options[0].value + '\n**My answer**: ' + answers[answer] )
             .setTimestamp() 
