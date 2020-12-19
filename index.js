@@ -27,7 +27,7 @@ client.on('ready', () => {
             description: command.description,
         }})
         client.commands.set(command.name, command);
-        console.log(`Loaded command : ${command.name} from ${file}`, Reset)
+        console.log(`Loaded command : ${command.name} from ${file}`)
     }
 
     console.log("")
@@ -42,7 +42,7 @@ client.ws.on('INTERACTION_CREATE', async interaction => {
         client.commands.get(interaction.data.name).execute(interaction);
     } catch (error) {
         console.log(`Error from command ${interaction.data.name} : ${error.message}`);
-        console.log(`${error.stack}`, Reset)
+        console.log(`${error.stack}`)
         console.log("")
         client.api.interactions(interaction.id, interaction.token).callback.post({data: {
 			type: 4,
