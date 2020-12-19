@@ -19,11 +19,11 @@ client.on('ready', () => {
     for (const file of commandFiles) {
         const command = require(`./commands/${file}`);
         // Test server
-        client.api.applications(client.user.id).guilds('749595288280498188').commands.post({ data: {
-            name: command.name,
-            description: command.description,
-            options: command.commandOptions
-        }})
+        // client.api.applications(client.user.id).guilds('749595288280498188').commands.post({ data: {
+        //     name: command.name,
+        //     description: command.description,
+        //     options: command.commandOptions
+        // }})
         // Global
         client.api.applications(client.user.id).commands.post({ data: {
             name: command.name,
