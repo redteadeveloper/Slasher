@@ -12,7 +12,6 @@ module.exports = {
             .setColor('#00b140')
             .setTitle('Dice roll')
             .setDescription( 'Result: ' + facts[fact] )
-			.setTimestamp()
 			
 		client.api.interactions(interaction.id, interaction.token).callback.post({data: {
 			type: 4,

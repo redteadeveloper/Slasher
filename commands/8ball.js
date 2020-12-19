@@ -29,7 +29,6 @@ module.exports = {
             .setColor('#00b140')
             .setTitle('**8ball**')
             .setDescription( '**Your question**: ' + interaction.data.options[0].value + '\n**My answer**: ' + answers[answer] )
-            .setTimestamp() 
 
 		client.api.interactions(interaction.id, interaction.token).callback.post({data: {
 			type: 4,
