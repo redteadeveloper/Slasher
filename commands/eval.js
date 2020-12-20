@@ -1,4 +1,5 @@
 const Discord = require('discord.js')
+const fetch = require('node-fetch')
 const { inspect } = require('util');
 
 module.exports = {
@@ -55,21 +56,6 @@ module.exports = {
                         content: `<@!${interaction.member.user.id}>, an error occurred during evaluation.`
                     }
                 }
-            })
-            client.api.interactions(interaction.id, interaction.token).callback.post({data: {
-                type: 4,
-                data: {
-                        content: "```" + error + "```"
-                    }
-                }
-            }).catch(error => {
-                client.api.interactions(interaction.id, interaction.token).callback.post({data: {
-                    type: 4,
-                    data: {
-                            content: "Error too long, check logs."
-                        }
-                    }
-                })
             })
         }
 	},
