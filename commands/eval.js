@@ -40,7 +40,7 @@ module.exports = {
             })
             console.log("-- Inspection result --\n" + inspect(evaled) + "\n------------------------\n");
         } catch (error) {
-            console.error("-- Inspection result --\n" + error + "------------------------\n");
+            console.error("-- Inspection result --\n" + error + "\n------------------------\n");
             client.api.interactions(interaction.id, interaction.token).callback.post({data: {
                 type: 4,
                 data: {
