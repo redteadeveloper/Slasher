@@ -5,7 +5,7 @@ module.exports = {
 	name: 'botinfo',
 	description: 'View bot info.',
 	commandOptions: null,
-    global: false,
+    global: true,
 	execute(interaction) {
         const ram = process.memoryUsage().heapUsed / 1024 / 1024
         const botAuthor = client.users.cache.get("611396886418685982")
@@ -27,6 +27,7 @@ module.exports = {
                     { name: 'Command count', value: files.length, inline: true}
                 )
                 .setFooter(client.user.tag, client.user.displayAvatarURL({ size: 256, format: 'png', dynamic: true }))
+                .setTimestamp()
 
             client.api.interactions(interaction.id, interaction.token).callback.post({data: {
                 type: 4,
