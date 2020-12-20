@@ -8,8 +8,8 @@ module.exports = {
     global: false,
 	execute(interaction) {
         const ram = process.memoryUsage().heapUsed / 1024 / 1024
-        const botAuthor = client.users.cache.get("602011789408075777")
-        const dir = '.';
+        const botAuthor = client.users.cache.get("611396886418685982")
+        const dir = './commands';
 
         fs.readdir(dir, (err, files) => {
             const infoembed = new Discord.MessageEmbed()
@@ -19,12 +19,12 @@ module.exports = {
                 .addFields(
                     { name: 'Bot name', value: 'Slasher', inline: true },
                     { name: 'Developer', value: botAuthor.tag, inline: true },
-                    { name: 'Command count', value: files.length, inline: true}
+                    { name: "RAM", value: `${Math.round(ram * 100) / 100}MB`, inline: true}
                 )
                 .addFields(
                     { name: 'Server count', value: client.guilds.cache.size + " servers", inline: true },
                     { name: 'User count', value: client.users.cache.size + " users", inline: true},
-                    { name: "RAM", value: `${Math.round(ram * 100) / 100}MB`, inline: true}
+                    { name: 'Command count', value: files.length, inline: true}
                 )
                 .setFooter(client.user.tag, client.user.displayAvatarURL({ size: 256, format: 'png', dynamic: true }))
 
