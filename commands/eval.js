@@ -13,11 +13,11 @@ module.exports = {
             required: true
 		}
     ],
-	global: false,
+	global: true,
 	async execute(interaction) {
 
         if (interaction.member.user.id !== '611396886418685982') {
-            client.api.interactions(interaction.id, interaction.token).callback.post({data: {
+             return client.api.interactions(interaction.id, interaction.token).callback.post({data: {
                 type: 4,
                 data: {
                         content: "Only bot owner can use this command."
@@ -30,30 +30,21 @@ module.exports = {
 
         let evaled;
         try {
-            evaled = await eval(evalcmd);
+            evaled = await eval(`if (1>0) { ${evalcmd} }`);
             client.api.interactions(interaction.id, interaction.token).callback.post({data: {
                 type: 4,
                 data: {
-                        content: "```yaml\n" + inspect(evaled) + "\n```"
+                        content: `<@!${interaction.member.user.id}>, evaluation complete. Check logs.`
                     }
                 }
-            }).catch(error => {
-                client.api.interactions(interaction.id, interaction.token).callback.post({data: {
-                    type: 4,
-                    data: {
-                            content: "Result too long, check logs."
-                        }
-                    }
-                })
-            });
+            })
             console.log("-- Inspection result --\n" + inspect(evaled) + "\n------------------------");
-        }
-        catch (error) {
+        } catch (error) {
             console.error(error);
             client.api.interactions(interaction.id, interaction.token).callback.post({data: {
                 type: 4,
                 data: {
-                        content: `<@!${interaction.member.user.id}>, an error occurred during evaluation.`
+                        content: `<@!${interaction.member.user.id}>, an error occurred during evaluation. Check logs.`
                     }
                 }
             })
