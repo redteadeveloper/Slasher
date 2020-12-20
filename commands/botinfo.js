@@ -2,8 +2,8 @@ const Discord = require('discord.js')
 const fs = require('fs');
 
 module.exports = {
-	name: '8ball',
-	description: 'Ask the bot a question.',
+	name: 'botinfo',
+	description: 'View bot info.',
 	commandOptions: null,
     global: false,
 	execute(interaction) {
