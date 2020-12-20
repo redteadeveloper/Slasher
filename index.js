@@ -12,7 +12,7 @@ process.on('unhandledRejection', error => {
 
 client.on('ready', () => {
     
-    console.log(`\nLogged in : ${client.user.tag}`)
+    console.log(`\nLogged in : ${client.user.tag}\n`)
     client.user.setActivity(`Slash!`, { type: "PLAYING" })
         .then((presense) => console.log(`Set presense : ${presense.activities[0]}\n`))
         .catch(console.error);
