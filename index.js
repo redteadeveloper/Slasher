@@ -12,8 +12,10 @@ process.on('unhandledRejection', error => {
 
 client.on('ready', () => {
     
-    console.log(`\nLogged in as ${client.user.tag}!\n`)
-    client.user.setActivity(`Slash!`, { type: "PLAYING" }); 
+    console.log(`\nLogged in : ${client.user.tag}`)
+    client.user.setActivity(`Slash!`, { type: "PLAYING" })
+        .then((presense) => console.log(`Set presense : ${presense.activities[0]}\n`))
+        .catch(console.error);
 
     const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
     for (const file of commandFiles) {
