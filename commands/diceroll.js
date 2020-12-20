@@ -4,6 +4,7 @@ module.exports = {
 	name: 'diceroll',
 	description: 'Roll a dice.',
 	commandOptions: null,
+	global: true,
 	execute(interaction) {
 
         var facts = ["1", "2", "3", "4", "5", "6"]

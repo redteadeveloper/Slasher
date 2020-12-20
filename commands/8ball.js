@@ -10,7 +10,8 @@ module.exports = {
             description: "Question to ask",
             required: true
 		}
-	],
+    ],
+    global: true,
 	execute(interaction) {
         var answers = [
             "Yes.",
