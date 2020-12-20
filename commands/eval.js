@@ -13,7 +13,7 @@ module.exports = {
 		}
     ],
 	global: false,
-	execute(interaction) {
+	async execute(interaction) {
 
         if (interaction.member.user.id !== '611396886418685982') {
             client.api.interactions(interaction.id, interaction.token).callback.post({data: {
