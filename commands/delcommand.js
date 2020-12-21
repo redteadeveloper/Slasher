@@ -17,7 +17,7 @@ module.exports = {
 
         var optionsGet = {
             hostname: 'discord.com',
-            path: '/applications/789522392702648346/commands',
+            path: '/api/applications/789522392702648346/commands',
             method: 'GET',
             headers: {
                 "Authorization": process.env.TOKEN
