@@ -1,5 +1,5 @@
 const Discord = require('discord.js')
-const http = require('http')
+const https = require('https')
 
 module.exports = {
 	name: 'delcommand',
@@ -24,7 +24,7 @@ module.exports = {
             }
         };
            
-        var reqGet = http.request(optionsGet, function(res) {
+        var reqGet = https.request(optionsGet, function(res) {
             console.log('Status: ' + res.statusCode)
             console.log('Headers: ' + JSON.stringify(res.headers))
             res.setEncoding('utf8')

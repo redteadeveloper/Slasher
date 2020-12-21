@@ -12,6 +12,7 @@
   "dependencies": {
     "discord.js": "^12.5.1",
     "http": "0.0.1-security",
+    "https": "^1.0.0",
     "node-fetch": "^2.6.1",
     "util": "^0.12.3"
   }
