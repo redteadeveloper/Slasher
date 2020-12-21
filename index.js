@@ -10,6 +10,8 @@ process.on('unhandledRejection', error => {
     console.log(`UnhandledPromiseRejection : ${error}`)
 });
 
+let commandNames = []
+
 client.on('ready', async () => {
     
     console.log(`\nLogged in : ${client.user.tag}\n`)
@@ -20,6 +22,7 @@ client.on('ready', async () => {
     const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
     for (const file of commandFiles) {
         const command = require(`./commands/${file}`);
+        commandNames.push(command.name)
         client.api.applications(client.user.id).guilds('749595288280498188').commands.post({ data: {
             name: command.name,
             description: command.description,
@@ -33,13 +36,15 @@ client.on('ready', async () => {
             }})
         }
         client.commands.set(command.name, command);
-        console.log(`Loaded command : ${command.name} from ${file} (status: ${command.global ? "global" : "private"})`)
+        console.log(`Command POST : ${command.name} from ${file} (status: ${command.global ? "global" : "guild"})`)
     }
     console.log("")
-
-    let cmdArr = await client.api.applications(client.user.id).commands.get()
-    console.log(cmdArr + "\n")
-
+    
+    let cmdArrGlobal = await client.api.applications(client.user.id).commands.get()
+    cmdArrGlobal.forEach(element => {
+        console.log(element + "\n")
+    });
+    
 });
 
 client.ws.on('INTERACTION_CREATE', async interaction => {
