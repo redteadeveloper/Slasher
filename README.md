@@ -1,6 +1,6 @@
 <div align="center">
   
-# Memey Man
+# Slasher
 
 <h3>Discord slash command bot</h3> 
 
