@@ -17,4 +17,4 @@
 [Invite here](https://discord.com/api/oauth2/authorize?client_id=789522392702648346&permissions=8&scope=bot%20applications.commands)
 
 ## Using
-<img src="https://user-images.githubusercontent.com/64125023/102770185-11bbb800-43c7-11eb-92a8-e67aa71eef2b.gif" width="55%"></img>
+<img src="https://user-images.githubusercontent.com/64125023/102770185-11bbb800-43c7-11eb-92a8-e67aa71eef2b.gif" width="70%"></img>
