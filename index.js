@@ -10,7 +10,7 @@ process.on('unhandledRejection', error => {
     console.log(`UnhandledPromiseRejection : ${error}`)
 });
 
-client.on('ready', () => {
+client.on('ready', async () => {
     
     console.log(`\nLogged in : ${client.user.tag}\n`)
     client.user.setActivity(`Slash!`, { type: "PLAYING" })
@@ -37,7 +37,7 @@ client.on('ready', () => {
     }
     console.log("")
 
-    let cmdArr = client.api.applications(client.user.id).commands.get()
+    let cmdArr = await client.api.applications(client.user.id).commands.get()
     console.log(cmdArr + "\n")
 
 });
