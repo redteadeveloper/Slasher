@@ -42,7 +42,7 @@ client.on('ready', async () => {
     
     let cmdArrGlobal = await client.api.applications(client.user.id).commands.get()
     cmdArrGlobal.forEach(element => {
-        console.log(element + "\n")
+        console.log("COMMAND" + element.name + "(id: " + element.id + ")" + "\n")
     });
     
 });
