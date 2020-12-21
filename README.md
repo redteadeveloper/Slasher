@@ -4,7 +4,7 @@
 
 <h3>Discord slash command bot</h3> 
 
-[![Library](https://img.shields.io/badge/Library-Discord.js-blueviolet)](https://discord.js.org/#/) [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) [![Codacy Badge](https://app.codacy.com/project/badge/Grade/40fdc1e22d414d7b8cdc02d9ce54117c)](https://www.codacy.com/gh/redteadeveloper/Slasher/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=redteadeveloper/Slasher&amp;utm_campaign=Badge_Grade)
+[![Library](https://img.shields.io/badge/Library-Discord.js-blue)](https://discord.js.org/#/) [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blueviolet.svg)](https://www.gnu.org/licenses/gpl-3.0) [![Codacy Badge](https://app.codacy.com/project/badge/Grade/40fdc1e22d414d7b8cdc02d9ce54117c)](https://www.codacy.com/gh/redteadeveloper/Slasher/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=redteadeveloper/Slasher&amp;utm_campaign=Badge_Grade)
 
 </div>
 
