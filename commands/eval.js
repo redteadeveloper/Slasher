@@ -20,7 +20,7 @@ module.exports = {
              return client.api.interactions(interaction.id, interaction.token).callback.post({data: {
                 type: 4,
                 data: {
-                        content: "Only bot owner can use this command."
+                        content: `<@!${interaction.member.user.id}>, only bot owner can use this command.`
                     }
                 }
             })
