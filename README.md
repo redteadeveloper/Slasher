@@ -22,6 +22,6 @@ The bot won't work without it.
 ## Using
 <img src="https://user-images.githubusercontent.com/64125023/102770185-11bbb800-43c7-11eb-92a8-e67aa71eef2b.gif" width="70%"></img>
 
-## additional links
+## Additional Links
 - [Discord Docs - Slash Commands](https://discord.com/developers/docs/interactions/slash-commands)
 - [Slash Commands in Discord.js](https://gist.github.com/advaith1/287e69c3347ef5165c0dbde00aa305d2)
