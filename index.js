@@ -43,11 +43,11 @@ client.on('ready', async () => {
     let cmdArrGlobal = await client.api.applications(client.user.id).commands.get()
     let cmdArrGuild = await client.api.applications(client.user.id).guilds('749595288280498188').commands.get()
     cmdArrGlobal.forEach(element => {
-        console.log("Global command loaded : " + element.name + " (id: " + element.id + ")" )
+        console.log("Global command loaded : " + element.name + " (" + element.id + ")" )
     });
     console.log("")
     cmdArrGuild.forEach(element => {
-        console.log("Guild command loaded : " + element.name + "(id: " + element.id + ")")
+        console.log("Guild command loaded : " + element.name + " (" + element.id + ")")
     });
     console.log("")
 });
