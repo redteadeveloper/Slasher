@@ -7,7 +7,7 @@ module.exports = {
 	commandOptions: [
 		{
 			type: 3,
-            name: "Guild ID",
+            name: "guild-id",
             description: "Not required for global commands.",
             required: false
 		}
