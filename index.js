@@ -37,6 +37,9 @@ client.on('ready', () => {
     }
     console.log("")
 
+    let cmdArr = client.api.applications(client.user.id).commands.get()
+    console.log(cmdArr + "\n")
+
 });
 
 client.ws.on('INTERACTION_CREATE', async interaction => {
