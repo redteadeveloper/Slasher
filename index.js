@@ -36,7 +36,7 @@ client.on('ready', async () => {
             }})
         }
         client.commands.set(command.name, command);
-        console.log(`Command POST : ${command.name} from ${file} (status: ${command.global ? "global" : "guild"})`)
+        console.log(`Command POST : ${command.name} from ${file} (${command.global ? "global" : "guild"})`)
     }
     console.log("")
     
