@@ -20,6 +20,8 @@ Invite the bot with **``applications.commands``** oauth2 scope.
 The bot won't work without it.
 
 ## Using
+Slasher uses **Slash Commands** to give you a new experience of using Discord bots.
+
 <img src="https://user-images.githubusercontent.com/64125023/102770185-11bbb800-43c7-11eb-92a8-e67aa71eef2b.gif" width="70%"></img>
 
 ## Additional Links
