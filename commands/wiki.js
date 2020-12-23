@@ -12,7 +12,7 @@ module.exports = {
             required: true
 		}
     ],
-	global: false,
+	global: true,
 	async execute(interaction) {
 
         const args1 = interaction.data.options[0].value.split(" ")
