@@ -13,7 +13,7 @@ module.exports = {
         .then(json => {
 
             const embed = new Discord.MessageEmbed()
-                .setColor('#7cfc00')
+                .setColor('#00b140')
                 .setTitle(json.title)
                 .setImage(json.url)
                 .setFooter(`Subreddit: r/${json.subreddit}`)

@@ -30,7 +30,7 @@ module.exports = {
         let url = data.content_urls ? data.content_urls.desktop.page : null
 
         const embed = new Discord.MessageEmbed()
-            .setColor(`#009900`)
+            .setColor(`#00b140`)
             .setTitle(title)
             .setURL(url)
             .setThumbnail(thumbnail)

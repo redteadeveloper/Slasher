@@ -36,7 +36,7 @@ module.exports = {
     
                 if(!results[0]) {
                     const resultembedn = new Discord.MessageEmbed()
-                        .setColor("#F9A602")
+                        .setColor("#00b140")
                         .setTitle("Not found.")
                         .setDescription("Couldn't retrieve any result.")
 
@@ -60,7 +60,7 @@ module.exports = {
                 }
     
                 const resultembed = new Discord.MessageEmbed()
-                    .setColor("#009900")
+                    .setColor("#00b140")
                     .setTitle(`Search result - ${search}`)
                     .setImage(img)
                     .setFooter("If the image doesn't load, search again.")
