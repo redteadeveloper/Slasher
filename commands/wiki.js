@@ -2,13 +2,13 @@ const Discord = require('discord.js')
 const fetch = require('node-fetch')
 
 module.exports = {
-	name: 'eval',
-	description: 'Executes JavaScript code.',
+	name: 'wiki',
+	description: 'Search anything on Wikipedia.',
 	commandOptions: [
 		{
 			type: 3,
-            name: "code",
-            description: "Code to execute",
+            name: "search query",
+            description: "String to search",
             required: true
 		}
     ],
