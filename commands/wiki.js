@@ -7,7 +7,7 @@ module.exports = {
 	commandOptions: [
 		{
 			type: 3,
-            name: "search query",
+            name: "search-query",
             description: "String to search",
             required: true
 		}

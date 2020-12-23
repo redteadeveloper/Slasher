@@ -7,7 +7,7 @@ client.commands = new Discord.Collection();
 global.client = client
 
 process.on('unhandledRejection', error => {
-    console.log(`UnhandledPromiseRejection : ${error}`)
+    console.log(`UnhandledPromiseRejection : ${error}\n`)
 });
 
 let commandNames = []
