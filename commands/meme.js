@@ -16,9 +16,7 @@ module.exports = {
                 .setColor('#7cfc00')
                 .setTitle(json.title)
                 .setImage(json.url)
-                .setFooter(`Subreddit: r/${json.subreddit}`)   
-
-            msg.channel.send(memeembed)   
+                .setFooter(`Subreddit: r/${json.subreddit}`)
 
             client.api.interactions(interaction.id, interaction.token).callback.post({data: {
                 type: 4,
