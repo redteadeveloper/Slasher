@@ -10,8 +10,6 @@ process.on('unhandledRejection', error => {
     console.log(`UnhandledPromiseRejection : ${error}\n`)
 });
 
-let commandNames = []
-
 client.on('ready', async () => {
     
     console.log(`\nLogged in : ${client.user.tag}\n`)
