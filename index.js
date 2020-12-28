@@ -20,7 +20,6 @@ client.on('ready', async () => {
     const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
     for (const file of commandFiles) {
         const command = require(`./commands/${file}`);
-        commandNames.push(command.name)
         client.api.applications(client.user.id).guilds('749595288280498188').commands.post({ data: {
             name: command.name,
             description: command.description,
