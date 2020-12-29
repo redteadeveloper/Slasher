@@ -1,5 +1,4 @@
 const Discord = require('discord.js')
-const fetch = require('node-fetch')
 const { inspect } = require('util');
 
 module.exports = {
