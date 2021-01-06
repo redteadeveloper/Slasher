@@ -28,8 +28,8 @@ module.exports = {
 	execute(interaction) {
 
         const title = interaction.data.options[0].value
-        const artist = interaction.data.options[1].value ? interaction.data.options[1].value : null
-        const album = interaction.data.options[2].value ? interaction.data.options[2].value : null
+        const artist = interaction.data.options[1] ? interaction.data.options[1].value : null
+        const album = interaction.data.options[2] ? interaction.data.options[2].value : null
 
         musicInfo.searchSong({ title: title, artist: artist, album: album }).then(res => {
 
