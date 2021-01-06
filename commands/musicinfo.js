@@ -30,7 +30,7 @@ module.exports = {
         const title = interaction.data.options[0].value
         const artist = interaction.data.options[1] ? interaction.data.options[1].value : ""
         const album = interaction.data.options[2] ? interaction.data.options[2].value : ""
-        
+
         musicInfo.searchSong({ title: title, artist: artist, album: album }).then(res => {
 
             const musicEmbed = new Discord.MessageEmbed()
@@ -48,6 +48,7 @@ module.exports = {
                 )
                 .addFields(
                     { name: 'Genre', value: res.genre, inline: true},
+                    { name: 'Country', value: res.country, inline: true},
                     { name: 'Release date', value: res.releaseDate.split("T")[0], inline: true },
                 )
                 .setFooter("Release date may be inaccurate.")
