@@ -31,6 +31,8 @@ module.exports = {
         const artist = interaction.data.options[1] ? interaction.data.options[1].value : null
         const album = interaction.data.options[2] ? interaction.data.options[2].value : null
 
+        console.log(`${title} ${artist} ${album}`)
+
         musicInfo.searchSong({ title: title, artist: artist, album: album }).then(res => {
 
             const musicEmbed = new Discord.MessageEmbed()
