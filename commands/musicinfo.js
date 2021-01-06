@@ -2,8 +2,8 @@ const Discord = require("discord.js")
 const musicInfo = require("music-info")
 
 module.exports = {
-	name: 'ping',
-	description: 'Ping!',
+	name: 'musicsearch',
+	description: 'Get information of any song.',
 	commandOptions: [
 		{
 			type: 3,
