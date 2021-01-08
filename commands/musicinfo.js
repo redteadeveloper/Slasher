@@ -51,6 +51,7 @@ module.exports = {
                     { name: 'Country', value: res.country, inline: true},
                     { name: 'Release date', value: res.releaseDate.split("T")[0], inline: true },
                 )
+                .setThumbnail(res.artwork)
                 .setFooter("Release date may be inaccurate.")
 
             client.api.interactions(interaction.id, interaction.token).callback.post({data: {
