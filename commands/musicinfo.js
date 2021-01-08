@@ -33,9 +33,11 @@ module.exports = {
 
         musicInfo.searchSong({ title: title, artist: artist, album: album }).then(res => {
 
+            console.log(res.artwork)
+
             const musicEmbed = new Discord.MessageEmbed()
                 .setColor("#00b140")
-                .setTitle(`About ${res.title} :notes:`)
+                .setTitle(`About *${res.title}* :notes:`)
                 .addFields(
                     { name: 'Title', value: res.title, inline: true },
                     { name: 'Artist', value: res.artist, inline: true },
