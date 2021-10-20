@@ -1,5 +1,7 @@
 <div align="center">
   
+  <h1>This bot was made for using Slash commands with discord.js v12. You shouldn't use this bot with discord.js v13.</h1>
+  
 # Slasher
 
 <h3>Discord slash command bot</h3> 
